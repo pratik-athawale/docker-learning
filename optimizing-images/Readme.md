@@ -6,3 +6,9 @@ npm install typescript@5.5.3 @types/express@4.17.21 --save-exact --save-dev
 
 docker build -t image-size:vanilla -f Dockerfile.size .
 docker history image-size:vanilla
+
+1. docker build -t no-dev-deps -f Dockerfile.size .
+2. docker run --rm -it no-dev-deps sh
+    check if jest and ts dev deps are there or not, they should not be 
+    since they are dev dependecies
+3. docker run --rm no-dev-deps
