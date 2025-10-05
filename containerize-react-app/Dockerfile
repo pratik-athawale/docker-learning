@@ -8,7 +8,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# 2. server the bundle with a HTTP server
+# 2. serve the bundle with a HTTP server
 FROM nginx:1.27.0
 
 COPY --from=build /app/build /usr/share/nginx/html 
