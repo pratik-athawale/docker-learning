@@ -3,8 +3,11 @@ npm run build
 npx http-server@14.1.1 build
 
 
-docker build -t react-app:alpine
+docker build -t react-app:alpine .
 docker run --rm -it react-app:alpine sh
     ls -la
     tree build
     exit
+
+
+docker build -t react:nginx .
