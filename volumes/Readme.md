@@ -1,6 +1,6 @@
 1.  docker volume create website-data
 
-`syntax for volume: -v <volume-name>:<container-path>`
+syntax for volume: `-v <volume-name>:<container-path>`
 
 2.  docker run \
     -d \
@@ -30,3 +30,12 @@
 
 6.  docker exec -it website-readonly1 sh
     cat /usr/share/nginx/html/index.html
+
+
+// docker volume commands
+docker volume ls
+docker volume create website-data
+docker volume inspect website-data
+docker volume ls -f name=website-data
+docker volume ls -f dangling=true
+docker volume rm website-data
