@@ -75,3 +75,5 @@ now it will have no containers in it
 app-net is removed now
 
 30. docker network ls
+
+# host network
